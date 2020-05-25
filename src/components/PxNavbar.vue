@@ -1,20 +1,29 @@
 <template>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo logo">RBoraure</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li>
-          <a href="sass.html">Sass</a>
-        </li>
-        <li>
-          <a href="badges.html">Components</a>
-        </li>
-        <li>
-          <a href="collapsible.html">JavaScript</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <b-navbar
+    transparent="true"
+    spaced="true"
+    style="padding-top: 10px; background-color: rgba(0, 153, 255, 0.3); position: relative;"
+  >
+    <template slot="brand">
+      <b-navbar-item tag="router-link" :to="{ path: '/' }">
+        <h3 class="logo is-size-2 is-dark">RBoraure</h3>
+      </b-navbar-item>
+    </template>
+    <template style="background-color: rgba(0, 153, 255, 0.3);" slot="end">
+      <b-navbar-item href="#" class="subTitle" active="false">
+        About
+      </b-navbar-item>
+      <b-navbar-item href="#" class="subTitle" active="false">
+        My work
+      </b-navbar-item>
+      <b-navbar-item href="#" class="subTitle" active="false">
+        Certifications
+      </b-navbar-item>
+      <b-navbar-item href="#" class="subTitle" active="false">
+        Work together
+      </b-navbar-item>
+    </template>
+  </b-navbar>
 </template>
 
 <script>
@@ -23,15 +32,16 @@ export default {};
 
 <style scoped>
 .logo {
-  font-family: "Permanent Marker" !important;
-  font-size: 9vh;
+  font-family: "Kaushan Script", cursive !important;
 }
 a {
   font-family: "Noto Sans" !important;
 }
-nav {
-  background-color: rgba(102, 111, 110, 0.459) !important;
+.subTitle {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: bold;
 }
-.nav-wrapper {
+.subTitle:hover {
+  color: antiquewhite !important;
 }
 </style>

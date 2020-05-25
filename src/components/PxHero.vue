@@ -1,12 +1,20 @@
 <template>
-  <div class="full-width">
-    <img
-      src="https://images.pexels.com/photos/374631/pexels-photo-374631.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-      alt="hero image"
-    >
-    <div class="heroTextContainer">
-      <h1>Welcome to my portfolio</h1>
-    </div>
+  <div>
+    <section class="hero hero-content">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="is-size-3 is-size-1-desktop">
+            I am Ricardo Boraure a Web Developer
+          </h1>
+          <p class="is-size-5 is-size-3-desktop">
+            Welcome to my personal portfolio
+          </p>
+        </div>
+      </div>
+      <div class="has-text-centered">
+        <img src="@/assets/hero.png" alt="Hero Image" />
+      </div>
+    </section>
   </div>
 </template>
 
@@ -15,22 +23,15 @@ export default {};
 </script>
 
 <style>
-@media (max-width: 320px;) {
-}
-img {
+.hero-content {
+  position: relative;
   z-index: 1;
-  position: absolute;
-  right: 0;
-  top: 0%;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  height: 80vh;
 }
-.full-width {
-  height: 99vh;
-  width: 95vw;
-}
-.heroTextContainer {
-  margin: auto;
+@media screen (max-width: 320px) {
+  img {
+    height: 250px;
+    width: 250px;
+  }
 }
 </style>
