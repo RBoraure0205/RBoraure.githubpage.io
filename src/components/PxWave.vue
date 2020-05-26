@@ -20,7 +20,7 @@ svg {
   position: absolute;
   top: 0;
   right: 0;
-  object-fit: cover;
+  object-fit: fill;
   height: 80vh;
 }
 </style>
