@@ -5,6 +5,7 @@
     <px-hero></px-hero>
     <px-about></px-about>
     <px-proyects></px-proyects>
+    <px-certificates></px-certificates>
   </main>
 </template>
 
@@ -14,16 +15,18 @@ import PxWave from "@/components/PxWave";
 import PxHero from "@/components/PxHero";
 import PxAbout from "@/components/PxAbout";
 import PxProyects from "@/components/PxProyects";
+import PxCertificates from "@/components/PxCertificates";
 
 export default {
   name: "App",
   components: {
     PxNavbar,
     PxWave,
+    PxCertificates,
     PxProyects,
     PxAbout,
-    PxHero,
-  },
+    PxHero
+  }
 };
 </script>
 
@@ -44,44 +47,44 @@ $success: #45cb85;
 $colors: (
   "white": (
     $white,
-    $black,
+    $black
   ),
   "black": (
     $black,
-    $white,
+    $white
   ),
   "light": (
     $light,
-    $light-invert,
+    $light-invert
   ),
   "dark": (
     $dark,
-    $dark-invert,
+    $dark-invert
   ),
   "primary": (
     $primary,
-    $primary-invert,
+    $primary-invert
   ),
   "info": (
     $info,
-    $info-invert,
+    $info-invert
   ),
   "success": (
     $success,
-    $success-invert,
+    $success-invert
   ),
   "warning": (
     $warning,
-    $warning-invert,
+    $warning-invert
   ),
   "danger": (
     $danger,
-    $danger-invert,
+    $danger-invert
   ),
   "twitter": (
     $twitter,
-    $twitter-invert,
-  ),
+    $twitter-invert
+  )
 );
 
 // Links

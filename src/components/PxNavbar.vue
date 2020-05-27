@@ -10,18 +10,10 @@
       </b-navbar-item>
     </template>
     <template style="background-color: rgba(0, 153, 255, 0.3);" slot="end">
-      <b-navbar-item href="#about" class="subTitle">
-        About
-      </b-navbar-item>
-      <b-navbar-item href="#proyects" class="subTitle">
-        Proyects
-      </b-navbar-item>
-      <b-navbar-item href="#" class="subTitle">
-        Certifications
-      </b-navbar-item>
-      <b-navbar-item href="#" class="subTitle">
-        Work together
-      </b-navbar-item>
+      <b-navbar-item href="#about" class="subTitle">About</b-navbar-item>
+      <b-navbar-item href="#proyects" class="subTitle">Proyects</b-navbar-item>
+      <b-navbar-item href="#certifications" class="subTitle">Certifications</b-navbar-item>
+      <b-navbar-item href="#" class="subTitle">Contact me</b-navbar-item>
     </template>
   </b-navbar>
 </template>
