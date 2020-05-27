@@ -14,11 +14,12 @@
           </h2>
           <p class="has-text-black-bis is-size-6 is-size-5-tablet is-size-4-desktop">
             I am a
-            <strong>Web Developer</strong>, i have an incredible passion
+            <strong>Web Developer</strong>, I have an incredible passion
             for
             <strong>Front-End</strong> tecnologies like
             <strong>Vue.Js</strong> and some libraries that improves UI. I can
             work with CSS frameworks and CSS preprocessors.
+            <Strong>I love keep learning</Strong>
             <br />
           </p>
         </div>
