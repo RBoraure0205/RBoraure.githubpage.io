@@ -2,6 +2,7 @@
   <div class="container certs-container" id="certifications">
     <h3
       class="is-size-4 is-size-3-tablet is-size-2-desktop has-text-info has-text-centered"
+<<<<<<< HEAD
     >
       Click bellow to see the certifications
     </h3>
@@ -16,6 +17,12 @@
           :key="i"
           class="certs-container"
         >
+=======
+    >Click bellow to see the certifications</h3>
+    <template>
+      <b-carousel :indicator-inside="false" :indicator-custom="true" class="certs-container">
+        <b-carousel-item v-for="(im, i) in imgs" :key="i" class="certs-container">
+>>>>>>> 33b0879543fec0b19ce6ac4ece1697ac9e3ab6ad
           <span class="image">
             <a :href="im.user" target="blank">
               <img :src="im.src" class="certs-container" />
@@ -32,6 +39,10 @@
   </div>
 </template>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 33b0879543fec0b19ce6ac4ece1697ac9e3ab6ad
 <script>
 export default {
   data() {
@@ -183,7 +194,11 @@ export default {
 };
 </script>
 
+<<<<<<< HEAD
 <style lang="scss">
+=======
+<style lang=scss>
+>>>>>>> 33b0879543fec0b19ce6ac4ece1697ac9e3ab6ad
 .is-active .al img {
   border: 1px solid #fff;
   filter: grayscale(0%);
@@ -212,4 +227,8 @@ export default {
     max-height: 60vh !important;
   }
 }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> 33b0879543fec0b19ce6ac4ece1697ac9e3ab6ad
