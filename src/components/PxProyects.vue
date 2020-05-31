@@ -14,12 +14,8 @@
             <div class="content">
               <p
                 class="title is-6 is-size-5-tablet is-size-4-desktop has-text-info"
-              >
-                {{ props.list.title }}
-              </p>
-              <p class="subtitle is-7 is-size-6 is-size-5-tablet has-text-gray">
-                @RBoraure
-              </p>
+              >{{ props.list.title }}</p>
+              <p class="subtitle is-7 is-size-6 is-size-5-tablet has-text-gray">@RBoraure</p>
               <div class="field is-grouped">
                 <p style="display: inline" v-if="props.list.description">
                   {{ props.list.description }}
@@ -29,8 +25,7 @@
                     target="blank"
                     class="has-text-info"
                     v-if="props.list.link"
-                    >{{ props.list.link }}</a
-                  >
+                  >{{ props.list.link }}</a>
                 </p>
               </div>
 
@@ -74,7 +69,7 @@ export default {
             "https://i.ibb.co/HPSkYPz/vue-exchange-2020-05-30-22-15-28.png",
           description:
             "A cryptocurrencies SPA, this web was made with Vue.js, tailwind and Vue-router, this SPA consume the coincap API, this web has filters to show important values like prices, market cap and variation in 24H, also has dinamic routing, charts and some other cool stuff.",
-          link: "",
+          link: "https://rboraure-vue-exchange.netlify.app/",
           tags: ["Vue.js", "Router", "SPA", "Tailwind"]
         }
       ]
