@@ -1,28 +1,98 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <main>
+    <px-wave></px-wave>
+    <px-navbar></px-navbar>
+    <px-hero></px-hero>
+    <px-about></px-about>
+    <px-proyects></px-proyects>
+    <px-certificates></px-certificates>
+  </main>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import PxNavbar from "@/components/PxNavbar";
+import PxWave from "@/components/PxWave";
+import PxHero from "@/components/PxHero";
+import PxAbout from "@/components/PxAbout";
+import PxProyects from "@/components/PxProyects";
+import PxCertificates from "@/components/PxCertificates";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
+    PxNavbar,
+    PxWave,
+    PxCertificates,
+    PxProyects,
+    PxAbout,
+    PxHero
   }
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+$primary: #57e2e5;
+$primary-invert: findColorInvert($primary);
+$twitter: #167df0;
+$twitter-invert: findColorInvert($twitter);
+$danger: #e08dac;
+$danger-invert: findColorInvert($danger);
+$black: #153131;
+$success: #45cb85;
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+  "white": (
+    $white,
+    $black
+  ),
+  "black": (
+    $black,
+    $white
+  ),
+  "light": (
+    $light,
+    $light-invert
+  ),
+  "dark": (
+    $dark,
+    $dark-invert
+  ),
+  "primary": (
+    $primary,
+    $primary-invert
+  ),
+  "info": (
+    $info,
+    $info-invert
+  ),
+  "success": (
+    $success,
+    $success-invert
+  ),
+  "warning": (
+    $warning,
+    $warning-invert
+  ),
+  "danger": (
+    $danger,
+    $danger-invert
+  ),
+  "twitter": (
+    $twitter,
+    $twitter-invert
+  )
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
 </style>
