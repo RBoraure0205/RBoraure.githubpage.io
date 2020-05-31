@@ -1,13 +1,9 @@
 <template>
   <section class="container section" id="about">
     <div class="box box-shadow">
-<<<<<<< HEAD
       <div
         class="columns is-centered is-desktop has-text-centered has-text-left-desktop"
       >
-=======
-      <div class="columns is-centered is-desktop has-text-centered has-text-left-desktop">
->>>>>>> 33b0879543fec0b19ce6ac4ece1697ac9e3ab6ad
         <div class="column">
           <figure class="image about">
             <img
@@ -23,18 +19,11 @@
             I am Ricardo Boraure
             <small class="has-text-grey">-@Rboraure</small>
           </h2>
-<<<<<<< HEAD
           <p
             class="has-text-black-bis is-size-6 is-size-5-tablet is-size-4-desktop"
           >
             I am a
             <strong>Web Developer</strong>, I have an incredible passion for
-=======
-          <p class="has-text-black-bis is-size-6 is-size-5-tablet is-size-4-desktop">
-            I am a
-            <strong>Web Developer</strong>, I have an incredible passion
-            for
->>>>>>> 33b0879543fec0b19ce6ac4ece1697ac9e3ab6ad
             <strong>Front-End</strong> tecnologies like
             <strong>Vue.Js</strong> and some libraries that improves UI. I can
             work with CSS frameworks and CSS preprocessors.
@@ -47,24 +36,16 @@
             <h3
               class="has-text-centered has-text-info is-size-3 is-size-2-tablet is-size-1-desktop has-text-weight-bold"
               style="text-decoration: underline"
-<<<<<<< HEAD
             >
               -My Skills-
             </h3>
-=======
-            >-My Skills-</h3>
->>>>>>> 33b0879543fec0b19ce6ac4ece1697ac9e3ab6ad
             <ul class>
               <li v-for="s in skills" :key="s.title">
                 <h3
                   class="has-text-weight-bold is size-5 is-size-4-tablet is-size-3-desktop has-text-black"
-<<<<<<< HEAD
                 >
                   {{ s.title }}
                 </h3>
-=======
-                >{{ s.title }}</h3>
->>>>>>> 33b0879543fec0b19ce6ac4ece1697ac9e3ab6ad
                 <b-progress
                   type="is-primary"
                   :value="s.value"
