@@ -69,7 +69,7 @@ export default {
             "https://i.ibb.co/HPSkYPz/vue-exchange-2020-05-30-22-15-28.png",
           description:
             "A cryptocurrencies SPA, this web was made with Vue.js, tailwind and Vue-router, this SPA consume the coincap API, this web has filters to show important values like prices, market cap and variation in 24H, also has dinamic routing, charts and some other cool stuff.",
-          link: "",
+          link: "https://rboraure-vue-exchange.netlify.app/",
           tags: ["Vue.js", "Router", "SPA", "Tailwind"]
         }
       ]

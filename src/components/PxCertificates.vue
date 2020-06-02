@@ -2,10 +2,20 @@
   <div class="container certs-container" id="certifications">
     <h3
       class="is-size-4 is-size-3-tablet is-size-2-desktop has-text-info has-text-centered"
-    >Click bellow to see the certifications</h3>
+    >
+      Click bellow to see the certifications
+    </h3>
     <template>
-      <b-carousel :indicator-inside="false" :indicator-custom="true" class="certs-container">
-        <b-carousel-item v-for="(im, i) in imgs" :key="i" class="certs-container">
+      <b-carousel
+        :indicator-inside="false"
+        :indicator-custom="true"
+        class="certs-container"
+      >
+        <b-carousel-item
+          v-for="(im, i) in imgs"
+          :key="i"
+          class="certs-container"
+        >
           <span class="image">
             <a :href="im.user" target="blank">
               <img :src="im.src" class="certs-container" />
@@ -21,7 +31,6 @@
     </template>
   </div>
 </template>
-
 
 <script>
 export default {
@@ -174,7 +183,7 @@ export default {
 };
 </script>
 
-<style lang=scss>
+<style lang="scss">
 .is-active .al img {
   border: 1px solid #fff;
   filter: grayscale(0%);

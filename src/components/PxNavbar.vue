@@ -12,9 +12,15 @@
       </template>
       <template style="background-color: rgba(0, 153, 255, 0.3);" slot="end">
         <b-navbar-item href="#about" class="subTitle">About</b-navbar-item>
-        <b-navbar-item href="#proyects" class="subTitle">Proyects</b-navbar-item>
-        <b-navbar-item href="#certifications" class="subTitle">Certifications</b-navbar-item>
-        <b-navbar-item @click="toggleModal" class="subTitle">Contact me</b-navbar-item>
+        <b-navbar-item href="#proyects" class="subTitle"
+          >Proyects</b-navbar-item
+        >
+        <b-navbar-item href="#certifications" class="subTitle"
+          >Certifications</b-navbar-item
+        >
+        <b-navbar-item @click="toggleModal" class="subTitle"
+          >Contact me</b-navbar-item
+        >
       </template>
     </b-navbar>
     <div class="modal" :class="showModal ? 'is-active' : ''">
@@ -25,17 +31,27 @@
             Contact me
             <small class="has-text-grey">-Click the links bellow</small>
           </p>
-          <button class="delete" aria-label="close" @click="toggleModal"></button>
+          <button
+            class="delete"
+            aria-label="close"
+            @click="toggleModal"
+          ></button>
         </header>
         <section class="modal-card-body">
           <div class>
-            <div v-for="(c, i) in contact" :key="i" class="contact-list is-flex justify">
+            <div
+              v-for="(c, i) in contact"
+              :key="i"
+              class="contact-list is-flex justify"
+            >
               <img :src="c.img" :alt="c.name" srcset class="img-list" />
               <div class="is-block">
                 <h3 class="has-text-primary is-size-5 is-size-4-tablet">
                   <a :href="c.link" target="blank">{{ c.user }}</a>
                 </h3>
-                <p class="has-text-gray is-size-6 is-size-5-tablet">{{ c.name }}</p>
+                <p class="has-text-gray is-size-6 is-size-5-tablet">
+                  {{ c.name }}
+                </p>
               </div>
             </div>
           </div>
@@ -58,40 +74,40 @@ export default {
           name: "Github",
           img: "https://image.flaticon.com/icons/png/512/2111/2111374.png",
           user: "RBoraure",
-          link: "https://github.com/RBoraure0205"
+          link: "https://github.com/RBoraure0205",
         },
         {
           name: "LinkedIn",
           img: "https://image.flaticon.com/icons/svg/2111/2111499.svg",
           user: "Ricardo Boraure",
-          link: "https://www.linkedin.com/in/rboraure/"
+          link: "https://www.linkedin.com/in/rboraure/",
         },
         {
           name: "Mail",
           img: "https://image.flaticon.com/icons/svg/2965/2965306.svg",
           user: "ricardoboraure@gmail.com",
-          link: "mailto:ricardoboraure@gmail.com"
+          link: "mailto:ricardoboraure@gmail.com",
         },
         {
           name: "Twitter",
           img: "https://image.flaticon.com/icons/svg/733/733579.svg",
           user: "RBoraure",
-          link: "https://twitter.com/rboraure"
+          link: "https://twitter.com/rboraure",
         },
         {
           name: "Cellphone",
           img: "https://image.flaticon.com/icons/png/512/2948/2948158.png",
           user: "829-546-5099",
-          link: "tel:+18295465099"
-        }
-      ]
+          link: "tel:+18295465099",
+        },
+      ],
     };
   },
   methods: {
     toggleModal() {
       this.showModal = !this.showModal;
-    }
-  }
+    },
+  },
 };
 </script>
 
