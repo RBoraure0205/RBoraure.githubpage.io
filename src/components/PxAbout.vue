@@ -5,7 +5,7 @@
         <div class="column">
           <figure class="image about">
             <img
-              src="https://images.pexels.com/photos/318391/pexels-photo-318391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              src="@/assets/rboraure.jpg"
               alt="RBoraure Profile pic"
               class="is-rounded"
             />
