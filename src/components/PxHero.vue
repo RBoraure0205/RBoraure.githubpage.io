@@ -4,13 +4,11 @@
       <div class="hero-body">
         <div class="container">
           <h1
-            class="is-size-3 is-size-1-desktop has-text-dark has-text-weight-bold"
-          >
-            I am Ricardo Boraure a Web Developer
-          </h1>
-          <p class="is-size-5 is-size-3-desktop has-text-primary">
-            Welcome to my personal portfolio, made with buefy
-          </p>
+            class="is-size-3 is-size-1-desktop has-text-white has-text-weight-bold"
+          >I am Ricardo Boraure a Web Developer</h1>
+          <p
+            class="is-size-5 is-size-3-desktop has-text-primary"
+          >Welcome to my personal portfolio, made with buefy</p>
         </div>
       </div>
       <div class="has-text-centered">
