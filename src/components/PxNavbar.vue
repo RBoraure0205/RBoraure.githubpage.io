@@ -7,18 +7,20 @@
     >
       <template slot="brand">
         <b-navbar-item tag="a" href="#">
-          <h3 class="logo is-size-2 has-text-dark">@RBoraure</h3>
+          <h3 class="logo is-size-2 has-text-light">@RBoraure</h3>
         </b-navbar-item>
       </template>
       <template style="background-color: rgba(0, 153, 255, 0.3);" slot="end">
-        <b-navbar-item href="#about" class="subTitle">About</b-navbar-item>
-        <b-navbar-item href="#proyects" class="subTitle"
+        <b-navbar-item href="#about" class="subTitle has-text-white"
+          >About</b-navbar-item
+        >
+        <b-navbar-item href="#proyects" class="subTitle has-text-white"
           >Proyects</b-navbar-item
         >
-        <b-navbar-item href="#certifications" class="subTitle"
+        <b-navbar-item href="#certifications" class="subTitle has-text-white"
           >Certifications</b-navbar-item
         >
-        <b-navbar-item @click="toggleModal" class="subTitle"
+        <b-navbar-item @click="toggleModal" class="subTitle has-text-white"
           >Contact me</b-navbar-item
         >
       </template>
@@ -74,40 +76,40 @@ export default {
           name: "Github",
           img: "https://image.flaticon.com/icons/png/512/2111/2111374.png",
           user: "RBoraure",
-          link: "https://github.com/RBoraure0205",
+          link: "https://github.com/RBoraure0205"
         },
         {
           name: "LinkedIn",
           img: "https://image.flaticon.com/icons/svg/2111/2111499.svg",
           user: "Ricardo Boraure",
-          link: "https://www.linkedin.com/in/rboraure/",
+          link: "https://www.linkedin.com/in/rboraure/"
         },
         {
           name: "Mail",
           img: "https://image.flaticon.com/icons/svg/2965/2965306.svg",
           user: "ricardoboraure@gmail.com",
-          link: "mailto:ricardoboraure@gmail.com",
+          link: "mailto:ricardoboraure@gmail.com"
         },
         {
           name: "Twitter",
           img: "https://image.flaticon.com/icons/svg/733/733579.svg",
           user: "RBoraure",
-          link: "https://twitter.com/rboraure",
+          link: "https://twitter.com/rboraure"
         },
         {
           name: "Cellphone",
           img: "https://image.flaticon.com/icons/png/512/2948/2948158.png",
           user: "829-546-5099",
-          link: "tel:+18295465099",
-        },
-      ],
+          link: "tel:+18295465099"
+        }
+      ]
     };
   },
   methods: {
     toggleModal() {
       this.showModal = !this.showModal;
-    },
-  },
+    }
+  }
 };
 </script>
 

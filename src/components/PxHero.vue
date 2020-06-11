@@ -4,7 +4,7 @@
       <div class="hero-body">
         <div class="container">
           <h1
-            class="is-size-3 is-size-1-desktop has-text-dark has-text-weight-bold"
+            class="is-size-3 is-size-1-desktop has-text-white has-text-weight-bold"
           >
             I am Ricardo Boraure a Web Developer
           </h1>

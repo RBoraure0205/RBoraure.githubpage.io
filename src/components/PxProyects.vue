@@ -14,8 +14,12 @@
             <div class="content">
               <p
                 class="title is-6 is-size-5-tablet is-size-4-desktop has-text-info"
-              >{{ props.list.title }}</p>
-              <p class="subtitle is-7 is-size-6 is-size-5-tablet has-text-gray">@RBoraure</p>
+              >
+                {{ props.list.title }}
+              </p>
+              <p class="subtitle is-7 is-size-6 is-size-5-tablet has-text-gray">
+                @RBoraure
+              </p>
               <div class="field is-grouped">
                 <p style="display: inline" v-if="props.list.description">
                   {{ props.list.description }}
@@ -25,7 +29,8 @@
                     target="blank"
                     class="has-text-info"
                     v-if="props.list.link"
-                  >{{ props.list.link }}</a>
+                    >{{ props.list.link }}</a
+                  >
                 </p>
               </div>
 
