@@ -5,12 +5,19 @@
         <div class="container">
           <h1
             class="is-size-3 is-size-1-desktop has-text-white has-text-weight-bold"
+<<<<<<< HEAD
           >
             I am Ricardo Boraure a Web Developer
           </h1>
           <p class="is-size-5 is-size-3-desktop has-text-primary">
             Welcome to my personal portfolio, made with buefy
           </p>
+=======
+          >I am Ricardo Boraure a Web Developer</h1>
+          <p
+            class="is-size-5 is-size-3-desktop has-text-primary"
+          >Welcome to my personal portfolio, made with buefy</p>
+>>>>>>> 1fcb9b09f0778f4f3767373ee3a59c7db013e455
         </div>
       </div>
       <div class="has-text-centered">

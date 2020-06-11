@@ -11,6 +11,7 @@
         </b-navbar-item>
       </template>
       <template style="background-color: rgba(0, 153, 255, 0.3);" slot="end">
+<<<<<<< HEAD
         <b-navbar-item href="#about" class="subTitle has-text-white"
           >About</b-navbar-item
         >
@@ -23,6 +24,12 @@
         <b-navbar-item @click="toggleModal" class="subTitle has-text-white"
           >Contact me</b-navbar-item
         >
+=======
+        <b-navbar-item href="#about" class="subTitle has-text-white">About</b-navbar-item>
+        <b-navbar-item href="#proyects" class="subTitle has-text-white">Proyects</b-navbar-item>
+        <b-navbar-item href="#certifications" class="subTitle has-text-white">Certifications</b-navbar-item>
+        <b-navbar-item @click="toggleModal" class="subTitle has-text-white">Contact me</b-navbar-item>
+>>>>>>> 1fcb9b09f0778f4f3767373ee3a59c7db013e455
       </template>
     </b-navbar>
     <div class="modal" :class="showModal ? 'is-active' : ''">
@@ -33,27 +40,17 @@
             Contact me
             <small class="has-text-grey">-Click the links bellow</small>
           </p>
-          <button
-            class="delete"
-            aria-label="close"
-            @click="toggleModal"
-          ></button>
+          <button class="delete" aria-label="close" @click="toggleModal"></button>
         </header>
         <section class="modal-card-body">
           <div class>
-            <div
-              v-for="(c, i) in contact"
-              :key="i"
-              class="contact-list is-flex justify"
-            >
+            <div v-for="(c, i) in contact" :key="i" class="contact-list is-flex justify">
               <img :src="c.img" :alt="c.name" srcset class="img-list" />
               <div class="is-block">
                 <h3 class="has-text-primary is-size-5 is-size-4-tablet">
                   <a :href="c.link" target="blank">{{ c.user }}</a>
                 </h3>
-                <p class="has-text-gray is-size-6 is-size-5-tablet">
-                  {{ c.name }}
-                </p>
+                <p class="has-text-gray is-size-6 is-size-5-tablet">{{ c.name }}</p>
               </div>
             </div>
           </div>
