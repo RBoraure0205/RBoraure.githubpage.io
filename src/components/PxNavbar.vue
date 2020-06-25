@@ -1,136 +1,68 @@
 <template>
-  <div>
-    <b-navbar
-      :spaced="true"
-      :fixed-top="true"
-      style="padding-top: 10px; background-color: rgba(0, 153, 255, 0.3);"
+  <div class="nav">
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-transparent justify-content-between"
     >
-      <template slot="brand">
-        <b-navbar-item tag="a" href="#">
-          <h3 class="logo is-size-2 has-text-light">@RBoraure</h3>
-        </b-navbar-item>
-      </template>
-      <template style="background-color: rgba(0, 153, 255, 0.3);" slot="end">
-<<<<<<< HEAD
-        <b-navbar-item href="#about" class="subTitle has-text-white"
-          >About</b-navbar-item
-        >
-        <b-navbar-item href="#proyects" class="subTitle has-text-white"
-          >Proyects</b-navbar-item
-        >
-        <b-navbar-item href="#certifications" class="subTitle has-text-white"
-          >Certifications</b-navbar-item
-        >
-        <b-navbar-item @click="toggleModal" class="subTitle has-text-white"
-          >Contact me</b-navbar-item
-        >
-=======
-        <b-navbar-item href="#about" class="subTitle has-text-white">About</b-navbar-item>
-        <b-navbar-item href="#proyects" class="subTitle has-text-white">Proyects</b-navbar-item>
-        <b-navbar-item href="#certifications" class="subTitle has-text-white">Certifications</b-navbar-item>
-        <b-navbar-item @click="toggleModal" class="subTitle has-text-white">Contact me</b-navbar-item>
->>>>>>> 1fcb9b09f0778f4f3767373ee3a59c7db013e455
-      </template>
-    </b-navbar>
-    <div class="modal" :class="showModal ? 'is-active' : ''">
-      <div class="modal-background"></div>
-      <div class="modal-card">
-        <header class="modal-card-head">
-          <p class="modal-card-title has-text-info">
-            Contact me
-            <small class="has-text-grey">-Click the links bellow</small>
-          </p>
-          <button class="delete" aria-label="close" @click="toggleModal"></button>
-        </header>
-        <section class="modal-card-body">
-          <div class>
-            <div v-for="(c, i) in contact" :key="i" class="contact-list is-flex justify">
-              <img :src="c.img" :alt="c.name" srcset class="img-list" />
-              <div class="is-block">
-                <h3 class="has-text-primary is-size-5 is-size-4-tablet">
-                  <a :href="c.link" target="blank">{{ c.user }}</a>
-                </h3>
-                <p class="has-text-gray is-size-6 is-size-5-tablet">{{ c.name }}</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <footer class="modal-card-foot">
-          <button class="button" @click="toggleModal">Cancel</button>
-        </footer>
+      <a class="navbar-brand h3 text-white" href="#">RBoraure</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        @click="toggle"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        :class="vToggle ? '' : 'bg-teal'"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white h4 text-uppercase" href="#"
+              >About me</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white h4 text-uppercase" href="#">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white h4 text-uppercase" href="#"
+              >Certifications</a
+            >
+          </li>
+          <li class="nav-item">
+            <c-button :white="false" :content="'Contact me'"> </c-button>
+          </li>
+        </ul>
       </div>
-    </div>
+    </nav>
+    <img src="../assets/Wave.png" alt="" srcset="" />
   </div>
 </template>
 
 <script>
+import CButton from "./Button";
 export default {
   data() {
     return {
-      showModal: false,
-      contact: [
-        {
-          name: "Github",
-          img: "https://image.flaticon.com/icons/png/512/2111/2111374.png",
-          user: "RBoraure",
-          link: "https://github.com/RBoraure0205"
-        },
-        {
-          name: "LinkedIn",
-          img: "https://image.flaticon.com/icons/svg/2111/2111499.svg",
-          user: "Ricardo Boraure",
-          link: "https://www.linkedin.com/in/rboraure/"
-        },
-        {
-          name: "Mail",
-          img: "https://image.flaticon.com/icons/svg/2965/2965306.svg",
-          user: "ricardoboraure@gmail.com",
-          link: "mailto:ricardoboraure@gmail.com"
-        },
-        {
-          name: "Twitter",
-          img: "https://image.flaticon.com/icons/svg/733/733579.svg",
-          user: "RBoraure",
-          link: "https://twitter.com/rboraure"
-        },
-        {
-          name: "Cellphone",
-          img: "https://image.flaticon.com/icons/png/512/2948/2948158.png",
-          user: "829-546-5099",
-          link: "tel:+18295465099"
-        }
-      ]
+      vToggle: false,
     };
   },
   methods: {
-    toggleModal() {
-      this.showModal = !this.showModal;
-    }
-  }
+    toggle() {
+      this.vToggle = !this.vToggle;
+    },
+  },
+  components: {
+    CButton,
+  },
 };
 </script>
 
-<style scoped>
-.logo {
-  font-family: "Kaushan Script", cursive !important;
-}
-a {
-  font-family: "Noto Sans" !important;
-}
-.subTitle {
-  font-family: "Montserrat", sans-serif !important;
-  font-weight: bold;
-}
-/* .subTitle:hover {
-  color: antiquewhite !important;
-} */
-.img-list {
-  max-height: 100%;
-  margin-right: 10px;
-}
-.contact-list {
-  width: auto;
-  height: 70px;
-  margin: 10px 0;
-}
-</style>
+<style lang="scss"></style>
