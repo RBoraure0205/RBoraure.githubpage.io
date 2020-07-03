@@ -1,10 +1,8 @@
 <template>
   <div>
     <div class="row hero justify-content-between">
-      <div class="col-12 col-md-7 hero__content">
-        <h1 class="display-md-4 h1 font-weight-bold text-uppercase">
-          💻 Frontend Developer
-        </h1>
+      <div class="col-12 col-md-8 hero__content">
+        <h1 class="display-md-4 h1 font-weight-bold text-uppercase">💻 Frontend Developer</h1>
         <p class="h3 my-3 pr-5">
           Welcome to my personal portfolio, I’m glad because you are looking for
           me, I want to show you what I have done, my skills, my certification
@@ -15,9 +13,9 @@
           I am a Web Developer, I have an incredible passion for Frontend
           tecnologies like Vue.Js and some libraries that improves UI. I can
           work with CSS frameworks, CSS preprocessors and BEM methodology.
-          <span class="text-success text-uppercase font-wight-bold"
-            >I 💚 learn</span
-          >
+          <span
+            class="text-success text-uppercase font-wight-bold"
+          >I 💚 learn</span>
         </p>
         <c-button
           class="text-uppercase my-2"
@@ -27,7 +25,7 @@
         ></c-button>
       </div>
       <div
-        class="col-12 col-md-4 mx-auto hero__media d-flex justify-content-between d-md-block mt-5 mt-md-0"
+        class="col-12 col-md-3 mx-auto hero__media d-flex justify-content-between d-md-block mt-5 mt-md-0"
       >
         <px-profile></px-profile>
       </div>
@@ -41,8 +39,8 @@ import CButton from "./Button";
 export default {
   components: {
     PxProfile,
-    CButton,
-  },
+    CButton
+  }
 };
 </script>
 

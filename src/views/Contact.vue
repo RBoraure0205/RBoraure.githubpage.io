@@ -4,12 +4,9 @@
     <ul class="my-5 contact__list">
       <li v-for="(p,i) in profiles" :key="i">
         <h3 class="text-primary">{{p.name}}</h3>
-        <h4 class="text-muted">
-          - {{p.user}}
-          <a :href="p.url" target="_blank">
-            <span class="btn btn-primary mx-4">Contact</span>
-          </a>
-        </h4>
+        <a :href="p.url" target="_blank">
+          <h4 class="text-muted">- {{p.user}}</h4>
+        </a>
       </li>
     </ul>
   </section>

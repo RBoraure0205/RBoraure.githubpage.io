@@ -4,13 +4,10 @@ import "bootstrap";
 import "jquery";
 import "popper.js";
 import router from "./router";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import "vue-loaders/dist/vue-loaders.css";
+import VueLoadersPacman from "vue-loaders/dist/loaders/pacman";
 
-library.add(faUserSecret);
-
-Vue.component("font-awesome-icon", FontAwesomeIcon);
+Vue.use(VueLoadersPacman);
 
 Vue.config.productionTip = false;
 

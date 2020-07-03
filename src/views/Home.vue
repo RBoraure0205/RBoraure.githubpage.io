@@ -1,5 +1,5 @@
 <template>
-  <div class="home container-md">
+  <div class="home container-lg">
     <hero-cont></hero-cont>
   </div>
 </template>
