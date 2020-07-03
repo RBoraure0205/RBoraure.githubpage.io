@@ -1,20 +1,18 @@
 <template>
   <button type="button" class="c-button .hvr-grow">
-    <p class="h4" :class="this.color">{{ content }}</p>
+    <router-link :to="{ name: route }">
+      <p class="h4" :class="`text-${color}`">{{ content }}</p>
+    </router-link>
   </button>
 </template>
 
 <script>
 export default {
-  name: "button",
+  name: "c-button",
   props: {
     content: String,
-    white: Boolean,
-  },
-  computed: {
-    color(white) {
-      return white ? "text-white" : "text-dark";
-    },
+    color: String,
+    route: String,
   },
 };
 </script>

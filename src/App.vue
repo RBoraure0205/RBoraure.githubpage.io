@@ -1,20 +1,32 @@
 <template>
-  <main>
+  <div id="app">
     <nav-bar></nav-bar>
-  </main>
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
+  </div>
 </template>
-
 <script>
-import NavBar from "./components/PxNavbar";
+import NavBar from "@/components/PxNavbar";
 export default {
-  name: "App",
   components: {
     NavBar,
   },
 };
 </script>
-
 <style lang="scss">
-@import "./sass/index";
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "./sass/index";
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
 </style>

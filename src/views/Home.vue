@@ -1,9 +1,16 @@
 <template>
-  <section class="about-us"></section>
+  <div class="home container-md">
+    <hero-cont></hero-cont>
+  </div>
 </template>
 
 <script>
-export default {};
-</script>
+import HeroCont from "@/components/HeroCont";
 
-<style></style>
+export default {
+  name: "Home",
+  components: {
+    HeroCont
+  }
+};
+</script>
