@@ -3,9 +3,9 @@
     <h1 class="display-md-4 h1 font-weight-bold contact__title">👇🏼 Need to contact me?</h1>
     <ul class="my-5 contact__list">
       <li v-for="(p,i) in profiles" :key="i">
-        <h4 class="text-primary">
-          {{p.name}}
-          <span class="text-muted">- {{p.user}}</span>
+        <h3 class="text-primary">{{p.name}}</h3>
+        <h4 class="text-muted">
+          - {{p.user}}
           <a :href="p.url" target="_blank">
             <span class="btn btn-primary mx-4">Contact</span>
           </a>
@@ -22,7 +22,22 @@ export default {
     return {
       profiles: [
         {
-          name: "Github",
+          name: "📧 Gmail (recomended)",
+          user: "ricardoboraure@gmail.com",
+          url: "mailto:ricardoboraure@gmail.com"
+        },
+        {
+          name: "🐤 Twitter",
+          user: "RBoraure",
+          url: "https://twitter.com/rboraure"
+        },
+        {
+          name: "📸 Instagram",
+          user: "RBoraure",
+          url: "https://instagram.com/rboraure"
+        },
+        {
+          name: "👨🏼‍💻 Github",
           user: "RBoraure0205",
           url: "https://github.com/rboraure0205"
         }
