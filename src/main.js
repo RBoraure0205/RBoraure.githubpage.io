@@ -1,10 +1,17 @@
 import Vue from "vue";
 import App from "./App.vue";
-import Buefy from "buefy";
+import "bootstrap";
+import "jquery";
+import "popper.js";
+import router from "./router";
+import "vue-loaders/dist/vue-loaders.css";
+import VueLoadersPacman from "vue-loaders/dist/loaders/pacman";
+
+Vue.use(VueLoadersPacman);
 
 Vue.config.productionTip = false;
-Vue.use(Buefy);
 
 new Vue({
-  render: h => h(App)
+  router,
+  render: (h) => h(App),
 }).$mount("#app");

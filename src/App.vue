@@ -1,98 +1,32 @@
 <template>
-  <main>
-    <px-wave></px-wave>
-    <px-navbar></px-navbar>
-    <px-hero></px-hero>
-    <px-about></px-about>
-    <px-proyects></px-proyects>
-    <px-certificates></px-certificates>
-  </main>
+  <div id="app">
+    <nav-bar></nav-bar>
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
+  </div>
 </template>
-
 <script>
-import PxNavbar from "@/components/PxNavbar";
-import PxWave from "@/components/PxWave";
-import PxHero from "@/components/PxHero";
-import PxAbout from "@/components/PxAbout";
-import PxProyects from "@/components/PxProyects";
-import PxCertificates from "@/components/PxCertificates";
-
+import NavBar from "@/components/PxNavbar";
 export default {
-  name: "App",
   components: {
-    PxNavbar,
-    PxWave,
-    PxCertificates,
-    PxProyects,
-    PxAbout,
-    PxHero
-  }
+    NavBar,
+  },
 };
 </script>
-
 <style lang="scss">
-// Import Bulma's core
-@import "~bulma/sass/utilities/_all";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "./sass/index";
 
-// Set your colors
-$primary: #57e2e5;
-$primary-invert: findColorInvert($primary);
-$twitter: #167df0;
-$twitter-invert: findColorInvert($twitter);
-$danger: #e08dac;
-$danger-invert: findColorInvert($danger);
-$black: #153131;
-$success: #45cb85;
-// Setup $colors to use as bulma classes (e.g. 'is-twitter')
-$colors: (
-  "white": (
-    $white,
-    $black
-  ),
-  "black": (
-    $black,
-    $white
-  ),
-  "light": (
-    $light,
-    $light-invert
-  ),
-  "dark": (
-    $dark,
-    $dark-invert
-  ),
-  "primary": (
-    $primary,
-    $primary-invert
-  ),
-  "info": (
-    $info,
-    $info-invert
-  ),
-  "success": (
-    $success,
-    $success-invert
-  ),
-  "warning": (
-    $warning,
-    $warning-invert
-  ),
-  "danger": (
-    $danger,
-    $danger-invert
-  ),
-  "twitter": (
-    $twitter,
-    $twitter-invert
-  )
-);
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
 
-// Links
-$link: $primary;
-$link-invert: $primary-invert;
-$link-focus-border: $primary;
-
-// Import Bulma and Buefy styles
-@import "~bulma";
-@import "~buefy/src/scss/buefy";
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
 </style>

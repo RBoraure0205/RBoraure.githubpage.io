@@ -1,0 +1,14 @@
+//fuentes
+@import "../../node_modules/bootstrap/scss/variables";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lobster&family=Oswald:wght@300;400;700&display=swap");
+$fuente-base: "Lato";
+$fuente-titulo: "Oswald";
+$fuente-logo: "Lobster";
+$green: #2cb978;
+$darkGreen: #107a8b;
+//Mixins
+@mixin fuente($fuente) {
+  font-family: $fuente;
+}
+
+//
