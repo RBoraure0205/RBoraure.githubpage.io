@@ -24,8 +24,8 @@
       >
         <ul class="navbar-nav">
           <li class="nav-item">
-            <router-link :to="{ name: 'About' }">
-              <a class="nav-link text-white h4 text-uppercase">About me</a>
+            <router-link :to="{ name: 'Proyects' }">
+              <a class="nav-link text-white h4 text-uppercase">Proyects</a>
             </router-link>
           </li>
           <li class="nav-item">
