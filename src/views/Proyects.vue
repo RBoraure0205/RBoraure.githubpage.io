@@ -19,7 +19,11 @@
 <script>
 import PxModule from "@/components/PxModule";
 import StoryblokClient from "storyblok-js-client";
-const token = process.env.VUE_APP_TOKEN;
+
+const token =
+  process.env.node_env === "production"
+    ? process.env.APP_KEY
+    : process.env.VUE_APP_TOKEN;
 let storyapi = new StoryblokClient({
   accessToken: token,
 });
