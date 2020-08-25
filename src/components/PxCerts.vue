@@ -32,7 +32,7 @@ export default {
   name: "Pxcerts",
   data() {
     return {
-      base: "https://platzi.com",
+      base: "https://platzi.com"
     };
   },
   props: {
@@ -41,7 +41,7 @@ export default {
     badge: String,
     diploma: String,
     course: String,
-    career: String,
+    career: String
   },
   computed: {
     img() {
@@ -56,8 +56,8 @@ export default {
     },
     courseUrl() {
       return this.base + this.course;
-    },
-  },
+    }
+  }
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="module">
-    <h2 class="module__title">{{ title }}</h2>
+    <h1 class="module__title text-dark">{{ title }}</h1>
     <div class="module__controls">
       <i class="module__controls__left" @click="prev">👈</i>
       <h2 class="module__controls__title">
@@ -9,17 +9,20 @@
       <i class="module__controls__right" @click="next">👉</i>
     </div>
     <div class="module__content row">
-      <figure class="module__content__img figure col-5">
+      <figure class="module__content__img figure col-12 col-lg-5">
         <img
           :src="module.proyects[current].imgs.filename"
           class="figure-img img-fluid rounded"
-          alt="..."
+          alt="Proyect image"
         />
         <figcaption class="figure-caption text-right">
           {{ module.proyects[current].caption }}
         </figcaption>
       </figure>
-      <p class="module__content__description col-7" v-html="description"></p>
+      <p
+        class="module__content__description col-12 col-lg-7"
+        v-html="description"
+      ></p>
     </div>
   </div>
 </template>
@@ -29,11 +32,11 @@ import marked from "marked";
 export default {
   name: "PxModule",
   props: {
-    module: Object,
+    module: Object
   },
   data() {
     return {
-      current: 0,
+      current: 0
     };
   },
   methods: {
@@ -50,7 +53,7 @@ export default {
         return false;
       }
       this.current--;
-    },
+    }
   },
   computed: {
     title() {
@@ -61,9 +64,7 @@ export default {
     },
     description() {
       return marked(this.module.proyects[this.current].description);
-    },
-  },
+    }
+  }
 };
 </script>
-
-<style></style>

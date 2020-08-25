@@ -12,8 +12,8 @@ export default {
   props: {
     content: String,
     color: String,
-    route: String,
-  },
+    route: String
+  }
 };
 </script>
 

@@ -58,8 +58,8 @@
 import CButton from "./Button";
 export default {
   components: {
-    CButton,
-  },
+    CButton
+  }
 };
 </script>
 

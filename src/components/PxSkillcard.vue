@@ -18,7 +18,7 @@ export default {
   name: "PxSkillCard",
   props: {
     name: String,
-    items: Array,
+    items: Array
   },
   computed: {
     url() {
@@ -26,8 +26,8 @@ export default {
     },
     alt() {
       return this.name + " SVG";
-    },
-  },
+    }
+  }
 };
 </script>
 

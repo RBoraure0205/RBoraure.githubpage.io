@@ -13,39 +13,39 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: Home
   },
   {
     path: "/proyects",
     name: "Proyects",
-    component: Proyects,
+    component: Proyects
   },
   {
     path: "/skills",
     name: "Skill",
-    component: Skills,
+    component: Skills
   },
   {
     path: "/certs",
     name: "Certifications",
-    component: Certifications,
+    component: Certifications
   },
   {
     path: "/contact",
     name: "Contact",
-    component: Contact,
+    component: Contact
   },
   {
     path: "*",
     name: "Error",
-    component: Error,
-  },
+    component: Error
+  }
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes,
+  routes
 });
 
 export default router;

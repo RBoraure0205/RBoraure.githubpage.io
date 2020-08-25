@@ -1,19 +1,19 @@
 <template>
-  <section class="container-md ">
+  <main class="container-md">
     <vue-loaders-pacman
       class="certs__loader"
       color="#2AB579"
       scale="1.5"
       v-if="isLoading"
     />
-    <div class="proyects mt-4" v-if="!isLoading">
+    <section class="proyects mt-4" v-if="!isLoading">
       <px-module
         v-for="(m, i) in story.module"
         :key="i"
         :module="m"
       ></px-module>
-    </div>
-  </section>
+    </section>
+  </main>
 </template>
 
 <script>
@@ -25,7 +25,7 @@ const token =
     ? process.env.APP_KEY
     : process.env.VUE_APP_TOKEN;
 let storyapi = new StoryblokClient({
-  accessToken: token,
+  accessToken: token
 });
 export default {
   name: "Proyects",
@@ -34,9 +34,9 @@ export default {
     return {
       story: {},
       current: {
-        module: 0,
+        module: 0
       },
-      isLoading: Boolean,
+      isLoading: Boolean
     };
   },
   created() {
@@ -44,7 +44,7 @@ export default {
     // from the editor itself.
     this.isLoading = true;
     window.storyblok.init({
-      accessToken: token,
+      accessToken: token
     });
     window.storyblok.on("change", () => {
       // this will indicate to load the home story, exchange that with the full slug of your content
@@ -63,19 +63,19 @@ export default {
     getStory(slug, version) {
       storyapi
         .get("cdn/stories/" + slug, {
-          version: version,
+          version: version
         })
-        .then((response) => {
+        .then(response => {
           this.story = response.data.story.content;
         })
-        .catch((error) => {
+        .catch(error => {
           console.log(error);
         })
         .finally(() => {
           this.isLoading = false;
         });
-    },
-  },
+    }
+  }
 };
 </script>
 

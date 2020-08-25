@@ -43,7 +43,7 @@ export default {
       web: [
         {
           name: "html",
-          items: ["Layout", "Semantic HTML", "HTML 5", "Research pls"]
+          items: ["Layout", "Semantic HTML", "HTML 5", "Forms and Validation"]
         },
         {
           name: "css",
@@ -57,7 +57,7 @@ export default {
       tech: [
         {
           name: "vue",
-          items: ["Core", "CLI", "Router", "Transitions", "Components"]
+          items: ["Core", "CLI", "Router", "Transitions", "Components", "Nuxt"]
         },
         {
           name: "bem",

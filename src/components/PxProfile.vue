@@ -40,17 +40,20 @@ export default {
         "#Frontend",
         "#Frameworks",
         "#Responsive",
-        "#Libraries",
         "#Autodidact",
         "#BEM",
-        "#Git",
-      ],
+        "#Git"
+      ]
     };
   },
   components: {
-    PxBadges,
-  },
+    PxBadges
+  }
 };
 </script>
 
-<style></style>
+<style scoped>
+aside {
+  align-items: center;
+}
+</style>

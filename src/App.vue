@@ -10,8 +10,8 @@
 import NavBar from "@/components/PxNavbar";
 export default {
   components: {
-    NavBar,
-  },
+    NavBar
+  }
 };
 </script>
 <style lang="scss">

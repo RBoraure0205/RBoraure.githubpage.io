@@ -55,21 +55,21 @@ export default {
     return {
       careers: Array,
       courses: Array,
-      isLoading: true,
+      isLoading: true
     };
   },
   created() {
     this.isLoading = true;
     const data = api.fetchCourses();
-    data.then((res) => {
+    data.then(res => {
       this.careers = res.careers;
       this.courses = res.courses;
     });
     data.finally(() => (this.isLoading = false));
   },
   components: {
-    PxCerts,
-  },
+    PxCerts
+  }
 };
 </script>
 
