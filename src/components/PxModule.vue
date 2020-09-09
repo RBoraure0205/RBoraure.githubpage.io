@@ -10,19 +10,25 @@
     </div>
     <div class="module__content row">
       <figure class="module__content__img figure col-12 col-lg-5">
-        <img
-          :src="module.proyects[current].imgs.filename"
-          class="figure-img img-fluid rounded"
-          alt="Proyect image"
-        />
+        <a :href="this.url" target="_blank">
+          <img
+            :src="module.proyects[current].imgs.filename"
+            class="figure-img img-fluid rounded"
+            alt="Proyect image"
+          />
+        </a>
         <figcaption class="figure-caption text-right">
           {{ module.proyects[current].caption }}
         </figcaption>
       </figure>
-      <p
-        class="module__content__description col-12 col-lg-7"
-        v-html="description"
-      ></p>
+      <div class="module__content__description col-12 col-lg-7">
+        <p v-html="description"></p>
+
+        <span
+          >Do you want to see more?
+          <a :href="this.url" target="_blank">Click Here</a></span
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -64,6 +70,9 @@ export default {
     },
     description() {
       return marked(this.module.proyects[this.current].description);
+    },
+    url() {
+      return this.module.proyects[this.current].url;
     }
   }
 };
