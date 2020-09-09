@@ -3,29 +3,27 @@
     <div class="skills__card__svg">
       <img :src="url" :alt="alt" />
     </div>
-    <div class="skills__card__content pt-4">
-      <ul>
-        <li class="text-white h6" v-for="(item, i) in items" :key="i">
-          {{ item }}
-        </li>
-      </ul>
-    </div>
+    <div class="skills__card__content p-1 pt-2 text-white" v-html="items"></div>
   </div>
 </template>
 
 <script>
+import marked from "marked";
 export default {
   name: "PxSkillCard",
   props: {
-    name: String,
-    items: Array
+    img: Object,
+    options: String
   },
   computed: {
     url() {
-      return require("@/assets/" + this.name + ".svg");
+      return this.img.filename;
     },
     alt() {
-      return this.name + " SVG";
+      return this.img.alt;
+    },
+    items() {
+      return marked(this.options);
     }
   }
 };

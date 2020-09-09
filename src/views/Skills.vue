@@ -1,38 +1,35 @@
 <template>
   <section class="container-md skills">
-    <h1
-      class="display-md-4 h1 font-weight-bold text-uppercase my-5 text-black skills__title"
-    >
-      Web Development
-    </h1>
-    <div class="d-flex justify-content-around flex-wrap w-100">
-      <px-skillcard
-        v-for="(w, i) in web"
-        :key="i"
-        :name="w.name"
-        :items="w.items"
-        class="mb-3"
-      ></px-skillcard>
-    </div>
-    <h1
-      class="display-md-4 h1 font-weight-bold text-uppercase my-5 text-black skills__title"
-    >
-      Tech & Metodologies
-    </h1>
-    <div class="d-flex justify-content-around flex-wrap w-100">
-      <px-skillcard
-        v-for="(t, i) in tech"
-        :key="i"
-        :name="t.name"
-        :items="t.items"
-        class="mb-3"
-      ></px-skillcard>
+    <div v-for="item in techs" :key="item._uid">
+      <h1
+        class="display-md-4 h1 font-weight-bold text-uppercase my-5 text-black skills__title"
+      >
+        {{ item.Title }}
+      </h1>
+      <div class="d-flex justify-content-around flex-wrap w-100">
+        <px-skillcard
+          v-for="tech in item.Tech"
+          :key="tech._uid"
+          :img="tech.Img"
+          :options="tech.Options"
+          class="mb-3"
+        ></px-skillcard>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 import PxSkillcard from "@/components/PxSkillcard";
+import StoryblokClient from "storyblok-js-client";
+
+const token =
+  process.env.node_env === "production"
+    ? process.env.APP_KEY
+    : process.env.VUE_APP_TOKEN;
+let storyapi = new StoryblokClient({
+  accessToken: token
+});
 export default {
   name: "Skills",
   components: {
@@ -40,45 +37,45 @@ export default {
   },
   data() {
     return {
-      web: [
-        {
-          name: "html",
-          items: ["Layout", "Semantic HTML", "HTML 5", "Forms and Validation"]
-        },
-        {
-          name: "css",
-          items: ["Basics", "Flexbox", "Grid Layout", "CSS 3", "Responsive"]
-        },
-        {
-          name: "javascript",
-          items: ["DOM", "ES6", "OOP", "Libraries", "APIS"]
-        }
-      ],
-      tech: [
-        {
-          name: "vue",
-          items: ["Core", "CLI", "Router", "Transitions", "Components", "Nuxt"]
-        },
-        {
-          name: "bem",
-          items: ["Block", "Element", "Modifier", "Clean CSS"]
-        },
-        {
-          name: "bulma",
-          items: ["Helpers", "Modifiers", "Elements", "Buefy", "Customize"]
-        },
-        {
-          name: "bootstrap",
-          items: [
-            "Content",
-            "Components",
-            "Utilities",
-            "Customize",
-            "Responsive"
-          ]
-        }
-      ]
+      techs: {}
     };
+  },
+  created() {
+    // 4. Initialize the Storyblok Client Bridge to allow us to subscribe to events
+    // from the editor itself.
+    this.isLoading = true;
+    window.storyblok.init({
+      accessToken: token
+    });
+    window.storyblok.on("change", () => {
+      // this will indicate to load the home story, exchange that with the full slug of your content
+      // either it is the page URL or hardcoded as in the example below
+      this.getStory("skills", "draft");
+    });
+    window.storyblok.pingEditor(() => {
+      if (window.storyblok.isInEditor()) {
+        this.getStory("skills", "draft");
+      } else {
+        this.getStory("skills", "published");
+      }
+    });
+  },
+  methods: {
+    getStory(slug, version) {
+      storyapi
+        .get("cdn/stories/" + slug, {
+          version: version
+        })
+        .then(response => {
+          this.techs = response.data.story.content.Group;
+        })
+        .catch(error => {
+          console.log(error);
+        })
+        .finally(() => {
+          this.isLoading = false;
+        });
+    }
   }
 };
 </script>
