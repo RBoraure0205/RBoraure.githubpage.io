@@ -1,6 +1,11 @@
 .nav {
   position: relative;
   width: 100%;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06);
+  background: linear-gradient(90deg, rgba(46,186,121,1) 0%, rgba(16,122,139,0.675490264465161) 58%, rgba(16,122,139,0.4457983877144608) 100%);
   .navbar {
     width: 100%;
     .navbar-brand {
@@ -16,13 +21,6 @@
     a:hover {
       text-decoration: underline !important;
     }
-  }
-  img {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 50vh;
-    z-index: -2;
   }
   @media screen and (max-width: 992px) {
     .navbar-collapse {

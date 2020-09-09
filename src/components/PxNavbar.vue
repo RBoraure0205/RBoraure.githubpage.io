@@ -1,8 +1,6 @@
 <template>
   <div class="nav">
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-transparent justify-content-between"
-    >
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
       <router-link :to="{ name: 'Home' }">
         <a class="navbar-brand h3 text-white">RBoraure</a>
       </router-link>
@@ -50,7 +48,6 @@
         </ul>
       </div>
     </nav>
-    <img src="../assets/Wave.png" alt srcset />
   </div>
 </template>
 
@@ -62,5 +59,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss"></style>
